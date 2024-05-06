@@ -1,0 +1,17 @@
+---
+import CardProduct from "./CardProduct.astro"
+const c1= 'Notebook';
+---
+<section class="bg-gray-100 py-8">
+    <div class="container mx-auto sm:px-6 text-center">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Productos Destacados</h2>
+        <div class="flex flex-wrap mx-4 sm:mx-6">
+           
+        <CardProduct title="ASUS X515MA-BR423W" categoria={c1} descripcion='2.200.000' img="1.png"/>
+        <CardProduct title="HP 250 G9" categoria={c1} descripcion='2.600.000' img="2.png"/>
+        <CardProduct title="HP 15-FC0093DX" categoria={c1} descripcion='4.000.000' img="3.png"/>
+        <CardProduct title="Dell 3000-3525" categoria={c1} descripcion='5.000.000' img="4.png"/>
+        <CardProduct title="Nitro V ANV15-51-55SJ" categoria={c1} descripcion='6.500.000' img="5.png"/>
+        </div>
+    </div>
+</section>

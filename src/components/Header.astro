@@ -1,0 +1,52 @@
+<header id="header" class="fixed w-full z-30 top-0 text-white py-0 transition duration-300 ease-in-out">
+    <div class="container mx-auto flex flex-wrap items-center justify-between mt-0 py-1 pb-2 px-4">
+        <div class="flex items-center">
+            <a class="text-gray-200 no-underline hover:no-underline font-bold text-3xl lg:text-3xl" href="#">
+              <span class=" text-yellow-400">Byte</span>ch Py
+            </a>
+        </div>
+        <div class="block lg:hidden">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+                <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menú</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+        </div>
+        <nav class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden pt-6 lg:pt-0" id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center lg:text-lg">
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-white no-underline" href="#">Inicio</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-white no-underline" href="#">Servicios</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-white no-underline" href="#">Productos</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-white no-underline" href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+        const header = document.getElementById('header');
+    
+        if (navToggle && navContent && header) {
+            window.addEventListener('scroll', function () {
+                const shouldBeDark = window.scrollY > 20 || !navContent.classList.contains('hidden');
+                header.classList.toggle('bg-[#13151a]', shouldBeDark);
+                header.classList.toggle('bg-transparent', !shouldBeDark);
+            });
+
+            navToggle.addEventListener('click', function () {
+                navContent.classList.toggle('hidden');
+                header.classList.toggle('bg-[#13151a]', !navContent.classList.contains('hidden'));
+                header.classList.toggle('bg-transparent', navContent.classList.contains('hidden'));                
+            });
+        }
+    });
+    
+    </script>
