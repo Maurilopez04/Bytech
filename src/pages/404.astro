@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="404 - Bytech Paraguay">
+<section class="bg-black min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-28">
+    <div class="text-center lg:text-left lg:w-1/2">
+        <p class="text-sm font-medium text-yellow-500">Error 404</p>
+        <h1 class="mt-2 text-4xl font-bold text-white md:text-5xl">Pagina no encontrada</h1>
+        
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-6">
+            <button onclick="history.back()" class="flex items-center px-5 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"/>
+                </svg>
+                Volver
+            </button>
+            <a href="/" class="px-5 py-2 text-sm font-medium text-white bg-yellow-500 rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Ir a Inicio
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-8 lg:mt-0 lg:w-1/2">
+        <img class="w-full max-w-md mx-auto" src="https://merakiui.com/images/components/illustration.svg" alt="404 Illustration">
+    </div>
+</section>
+
+</Layout>

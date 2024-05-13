@@ -1,0 +1,28 @@
+---
+// Componente de Astro para acortar URLs usando TinyURL.
+// No hay necesidad de importar módulos adicionales aquí.
+---
+<form class="space-y-4" id="urlShortenerForm">
+  <input type="url" name="url" id="urlInput" placeholder="Enter URL here"
+         class="p-2 border border-gray-300 rounded w-full" required>
+  <button type="submit"
+          class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors">
+    Shorten URL
+  </button>
+</form>
+<p id="shortenedUrl" class="mt-4 text-green-500"></p>
+
+<script>
+  const form = document.getElementById('urlShortenerForm');
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const url = document.getElementById('urlInput').value;
+    try {
+      const response = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`);
+      const result = await response.text();
+      document.getElementById('shortenedUrl').textContent = `Short URL: ${result}`;
+    } catch (error) {
+      document.getElementById('shortenedUrl').textContent = 'Error shortening URL.';
+    }
+  });
+</script>

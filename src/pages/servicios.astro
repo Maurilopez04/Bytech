@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro"
+import ServicesSection from "../components/ServicesSection.astro"
+import Mymodal from "../components/mymodal.astro"
+---
+<Layout title="Servicios - Bytech Paraguay">
+    <main class="bg-stone-900 text-white">
+    <div class="py-28 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Potencia tu empresa con nuestros servicios</h1>
+            <p class="text-lg mb-8">Ofrecemos soluciones digitales efectivas para impulsar tu negocio.</p>
+            <a href="#services" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-full">Descubre nuestros servicios</a>
+        </div>
+    </div>
+
+   <ServicesSection/>
+
+    <!-- Contact Section -->
+    <section class="bg-stone-900 text-white py-14">
+        <div class="container mx-auto text-center md:flex md:flex-row md:justify-around md:items-center">
+            <h3 class="text-2xl font-extrabold mb-8 md:mb-0">Para más información o si tienes alguna pregunta, no dudes en contactarnos.</h3>
+            <button id="open-modal-btn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full">Contactar</button>
+        </div>
+    </section>
+<Mymodal/>
+</main>
+</Layout>
