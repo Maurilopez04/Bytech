@@ -4,7 +4,7 @@ const products = [
     { name: 'Notebook HP 15-FC0093DX', url: '/img/3.png', category: 'notebook', price: 4000000 },
     { name: 'Notebook Dell 3000-3525', url: '/img/4.png', category: 'notebook', price: 5000000 },
     { name: 'Notebook Nitro V ANV15-51-55SJ', url: '/img/5.png', category: 'notebook', price: 6500000 },
-    { name: 'Impresora Brother Laser HL-1212W Wi-Fi ', url: '/img/imp-brother1.jpg', category: 'impresora', price: 1100000 },
+    { name: 'Impresora Brother Laser Wi-Fi ', url: '/img/imp-brother1.jpg', category: 'impresora', price: 1100000 },
     { name: 'IMPRESORA HP LASERJET WIFI', url: '/img/hp-laserjet-bl.jpg', category: 'impresora', price: 1300000 },
     { name: 'Impresora Samsung SL-M2035W Wifi', url: '/img/samsung-laser-bl.jpg', category: 'impresora', price: 1400000},
     { name: 'Monitor Mtek VA 22" Full HD 100Hz BL', url: '/img/mtek100hz-bl.jpg', category: 'monitor', price: 790000 },
@@ -32,7 +32,7 @@ const products = [
         <h2 class="text-gray-100 text-lg font-semibold">${product.name}</h2>
       </div>
       <div class="mt-auto px-5 pb-2">
-        <p class="text-gray-400">$${product.price}</p>
+        <p class="text-gray-400">${product.price.toLocaleString('es-PY', { style: 'currency', currency: 'PYG' })}</p>
       </div>
     </div>
   </div>
